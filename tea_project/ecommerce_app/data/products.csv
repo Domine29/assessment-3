@@ -1,0 +1,8 @@
+id,name,category,image_url,cost
+1,matcha,tea,https://static.thenounproject.com/attribution/4021102-600.png,5
+2,sencha,tea,https://static.thenounproject.com/attribution/2979572-600.png,3
+3,oolong,tea,https://static.thenounproject.com/attribution/1733779-600.png,2
+4,mochi,treats,https://static.thenounproject.com/attribution/5290947-600.png,1
+5,cookie,treats,https://static.thenounproject.com/attribution/643756-600.png,1
+6,teapot,teaware,https://static.thenounproject.com/attribution/3618982-600.png,30
+7,teacup,teaware,https://static.thenounproject.com/attribution/3802187-600.png,10
