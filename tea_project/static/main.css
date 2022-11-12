@@ -1,0 +1,14 @@
+#row_1 {
+  padding-top: 5%;
+}
+
+#product_container {
+  position: relative;
+}
+
+#product_name {
+  position: absolute;
+  top: 8px;
+  left: 25px;
+  text-transform: capitalize;
+}

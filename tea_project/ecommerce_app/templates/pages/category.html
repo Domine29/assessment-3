@@ -1,0 +1,18 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+  <h1 style="padding-top:5%; text-transform: uppercase; text-align: center;">{{category}}</h1>
+
+  <div class="row" id="row_1">
+    {% for item in category_items %}
+    <div class="d-flex flex-column-reverse col" id="product_container">
+      <a href="{% url 'product' item.0 %}">
+        <img src="{{item.2}}" style="width:100%; height:auto; border:solid 1px black" id="product_img"/>
+      </a>
+      
+      <h2 id="product_name">{{item.1}}</h2>
+    </div>
+    {% endfor %}
+
+  </div>
+{% endblock %}
