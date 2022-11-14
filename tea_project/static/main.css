@@ -12,3 +12,13 @@
   left: 25px;
   text-transform: capitalize;
 }
+
+.smart-payment-button--false .purchase-details {
+  align-items: flex-end;
+}
+
+.purchase-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

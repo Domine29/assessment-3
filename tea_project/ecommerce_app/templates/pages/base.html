@@ -43,13 +43,15 @@
             <a class="nav-link" href="{% url 'cart' %}">Shopping Cart</a>
           </span>
           <span class="nav-item active">
-            <a class="nav-link" href="{% url 'search' %}">Search</a>
+            <form action="{% url 'search' %}" method="GET">
+              <input name="name" type="text" placeholder="Search">
+              <input type="submit" placeholder="Search" value="Search">
+            </form>
           </span>
         </ul>
       </div>
     </nav>
   </div>
-  
 
   {% block content %}
   {% endblock %}

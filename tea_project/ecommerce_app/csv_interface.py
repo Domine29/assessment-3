@@ -1,4 +1,5 @@
 import csv
+import pandas as pd
 
 class CSV_Interface:
     def __init__(self, filename):
@@ -22,10 +23,14 @@ class CSV_Interface:
 
     def append_one_row_to_file(self, new_data_dict):
         with open(self.filename, "a", newline='') as f:
-            writer = csv.DictReader(f, fieldnames=self.column_names)
+            writer = csv.DictWriter(f, fieldnames=self.column_names)
             writer.writerow(new_data_dict)
 
         self.update_data_from_file()
         return self.all_data
+
+    def sum_qty(self):
+        df2=pd.read_csv(self.filename)
+        return df2['qty'].sum()
 
 

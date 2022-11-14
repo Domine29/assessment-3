@@ -1,0 +1,48 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+  {% if id %}
+    <div class="d-flex flex-row" style="padding-top:4px;">
+      <img
+        src="{{image_url}}"
+        style="width: 20%; height: auto; border: solid 1px black"
+        id="product_img"
+      />
+      <div class="d-flex flex-column">
+        <ul>
+          <p style="text-transform: capitalize">{{category}}</p>
+          <h3 style="text-transform: capitalize">{{name}}</h3>
+          <p>Price: ${{cost}}</p>
+          <p><strong>{{message}}</strong></p>
+          <div class="purchase-details">
+            <div class="purchase-details__quantity product-quantity-box">
+              <form action="/chachi/product/{{ id }}/add" method="POST">
+                {% csrf_token %}
+                <label for="quantity">Qty</label>
+                <input
+                  type="number"
+                  min="1"
+                  class="quantity"
+                  value="1"
+                  name = qty
+                >
+                <input type="submit" name="add" value="Add to Cart">
+              </form>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  {% else %}
+    <div class="d-flex flex-row" style="padding-top:4px;">
+      <img
+        src="{{error_img}}"
+        style="width: 20%; height: auto; border: solid 1px black"
+        id="product_img"
+      />
+      <p>{{error_message}}</p>
+    </div>
+  {% endif %}
+    
+{% endblock %}
